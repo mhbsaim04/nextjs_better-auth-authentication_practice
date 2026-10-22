@@ -12,7 +12,7 @@ const ResetPasswordForm = () => {
 
     const handleResetPassword = async(e) =>{
         e.preventDefault();
-        const formData = new FormData(e.currenttarget)
+        const formData = new FormData(e.currentTarget)
         const userData = Object.fromEntries(formData.entries())
         const resData = await resetPassword({
             newPassword: userData.password,
